@@ -3,7 +3,7 @@
 int main()
 {
 	int n;
-	printf("\nDigite o número:\n");
+	printf("\nDigite o numero:\n");
 	scanf("%d", &n);
 	if ((n%2) == 0) {
 	    printf("par\n");
