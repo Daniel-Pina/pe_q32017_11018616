@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-main() {
+int main()
+{
 	int n;
 	printf("\nDigite o número:\n");
 	scanf("%d", &n);
 	if ((n%2) == 0) {
-	    printf("par\n\n");
+	    printf("par\n");
 	}
 	else {
-    	printf("impar\n\n");
+    	printf("impar\n");
 	}
+
+	return 0;
 }
