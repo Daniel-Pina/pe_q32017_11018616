@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-/* Função recursiva não-caudal para calcular o número de dígitos de n */
+/* Função recursiva não-caudal para calcular a soma dos dígitos de n */
 int soma_digitos(int n)
 {
 	if (n < 10) return n;
@@ -9,7 +9,7 @@ int soma_digitos(int n)
 }
 
 
-/* Função recursiva caudal para calcular o número de dígitos de n */
+/* Função recursiva caudal para calcular a soma dos dígitos de n */
 int sdTR(int n, int base)
 {
 	if (n == 0) return base;
@@ -17,7 +17,7 @@ int sdTR(int n, int base)
 }
 
 
-/* Chama a função recursiva caudal da contagem de digitos */
+/* Chama a função recursiva caudal da soma dos digitos */
 int sd(int n)
 {
 	return sdTR(n, 0); 
