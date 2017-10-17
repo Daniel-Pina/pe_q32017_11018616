@@ -23,7 +23,7 @@ int main()
 {
     int id_cargo, faltas, h_extras;
     scanf("%d %d %d", &id_cargo, &faltas, &h_extras);
-	printf("%.2lf\n", salario(id_cargo, faltas, h_extras));
+    printf("%.2lf\n", salario(id_cargo, faltas, h_extras));
 
 	return 0;
 }
