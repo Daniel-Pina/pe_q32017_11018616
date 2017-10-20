@@ -23,7 +23,7 @@ int b_to_d_TR(int n, int soma, int mult)
     return (b_to_d_TR(n/10, (n%10)*pow(2, mult)+soma, mult+1));
 }
 
-/* Conversão recursiva de binário para decimal*/
+/* Conversão recursiva de binário para decimal */
 int b_to_d(int n)
 {
     return b_to_d_TR(n, 0, 0);
