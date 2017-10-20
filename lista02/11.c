@@ -11,9 +11,8 @@ int d_to_b(int n)
 /* Conversão decimal para binário caudal */
 int d_to_b_TR(int n, int bin, int mult)
 {
-    printf("%d, %d, %d\n", n, bin, mult);
-    if (n < 2) return (bin+(n*(pow(10, mult))));
-    return (d_to_b_TR(n/2, bin+((n%2)*pow(10, mult)), (mult+1)));
+    if (n == 0) return (bin);
+    return (d_to_b_TR(((int) n/2), bin+((n%2)*pow(10, mult)), (mult+1)));
 }
 
 
