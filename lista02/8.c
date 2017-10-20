@@ -9,7 +9,7 @@ double desc(int id_cargo, int faltas)
 
 double acresc(int id_cargo, int h_extras)
 {
-    return (double) ((((salarios_base[id_cargo-1])/(20*8))+40)*h_extras);
+    return ((double) ((((salarios_base[id_cargo-1])/(20*8))+40)*h_extras));
 }
 
 
