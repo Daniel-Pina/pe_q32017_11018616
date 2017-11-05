@@ -15,11 +15,11 @@ char * inverte_s(char * entrada)
 {
     int i, size;
     size = s_size(entrada);
-    char * adartne;
-    adartne = malloc(size*sizeof(char));
+    char * adartne = malloc(size*sizeof(char)+1);
     for (i=0; i<size; i++) {
         *(adartne+i) = *(entrada+size-i-1);
     }
+    *(adartne+size) = '\0';
     return adartne;
 }
 
