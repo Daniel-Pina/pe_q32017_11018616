@@ -46,6 +46,6 @@ int main()
 
 	arquivo[1] = Nic;
 
-	printf("\n\n\t\tCONTRATADO\nNome: %s\nIdade: %d\nPeso: %.2lf\nCor favorita: %c\nNova Função: %s\nSalário: %.2lf\n\n", arquivo[1].nome, arquivo[1].idade, arquivo[1].peso, arquivo[1].cor, arquivo[1].posicao.funcao, arquivo[1].posicao.salario);
+	printf("\n\n\t\tCONTRATADO\nNome: %s\nIdade: %d\nPeso: %.2lf\nCor favorita: %c\nNova Função: %s\nSalário: R$%.2lf\n\n", arquivo[1].nome, arquivo[1].idade, arquivo[1].peso, arquivo[1].cor, arquivo[1].posicao.funcao, arquivo[1].posicao.salario);
 
 }
