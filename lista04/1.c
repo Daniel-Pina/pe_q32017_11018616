@@ -3,9 +3,9 @@
 #include <math.h>
 
 typedef struct Ponto {
-	float x;
-	float y;
-	float z;
+    float x;
+    float y;
+    float z;
 } Ponto;
 
 float dist_pontos(Ponto A, Ponto B)
