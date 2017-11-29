@@ -1,0 +1,3 @@
+Daniel 0 1.88 A A A A A A
+Bob 1 1.68 C B C A A B
+Nikao 2 1.87 A B D A G G
