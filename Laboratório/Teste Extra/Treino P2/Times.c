@@ -1,14 +1,14 @@
 /*****************************************************\
 |* Times.c                                           *|
 |*                                                   *|
-|* Algoritmo de estudo do conteúdo da segunda prova  *|
-|* da disciplina de Programação Estruturada          *|
+|* Algoritmo de estudo do conteÃºdo da segunda prova  *|
+|* da disciplina de ProgramaÃ§Ã£o Estruturada          *|
 \*****************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
 
-/// Número de Times
+/// NÃºmero de Times
 #define N 20
 
 /// Struct que representa um clube de futebol
@@ -17,15 +17,15 @@ typedef struct Clube {
 	char nome[100];
 	int pontos;
 	int jogos;
-	int v;  // Vitórias
+	int v;  // VitÃ³rias
 	int e;  // Empates
 	int d;  // Derrotas
-	int gp; // Gols Pró
+	int gp; // Gols PrÃ³
 	int gc; // Gols Contra
 	int sg; // Saldo de Gols
 } Clube;
 
-/* Troca os elementos de índices m e n do vetor */
+/* Troca os elementos de Ã­ndices m e n do vetor */
 void swap(Clube * v, int m, int n)
 {
 	Clube aux;
@@ -34,7 +34,7 @@ void swap(Clube * v, int m, int n)
 	v[n] = aux;
 }
 
-/* Função de partição */
+/* FunÃ§Ã£o de partiÃ§Ã£o */
 int partition (Clube * v, int low, int high)
 {
     Clube pivot = v[high];
@@ -49,7 +49,7 @@ int partition (Clube * v, int low, int high)
     return i;
 }
 
-/* Ordenação por QuickSort */
+/* OrdenaÃ§Ã£o por QuickSort */
 void quicksort(Clube * v, int low, int high)
 {
     int p;
@@ -73,11 +73,11 @@ int main()
     }
 
 
-    /* Note que o vetor está ordenado por classificação */
+    /* Note que o vetor estÃ¡ ordenado por classificaÃ§Ã£o */
 
 
-    ///Por busca binária, encontrar o n-ésimo colocado do campeonato (classificacao = n) e imprime seus dados no arquivo
-    ///Esse tipo de busca supõe que o vetor já está pré-ordenado no quesito desejado
+    ///Por busca binÃ¡ria, encontrar o n-Ã©simo colocado do campeonato (classificacao = n) e imprime seus dados no arquivo
+    ///Esse tipo de busca supÃµe que o vetor jÃ¡ estÃ¡ prÃ©-ordenado no quesito desejado
     int n = 5;
     int m, h=0, t=N-1;
     while (1) {
@@ -90,12 +90,11 @@ int main()
             if (BR[m].classificacao > n) t = m-1;
             else h = m+1;
         }
-        //Verificação de erro
+        //VerificaÃ§Ã£o de erro
         if (h > t) {
             printf("\nERRO\n");
             break;
         }
-        printf("\nEEUUU\n");
     }
     FILE * n_pos;
     n_pos = fopen("colocacao_n.txt", "w");
@@ -126,23 +125,6 @@ int main()
     for (i=0; i<N; i++) {
         fprintf(less_gc, "\%d\t\%s\t\%d\n", BR[i].classificacao, BR[i].nome, BR[i].gc);
     }
-
-
-
-
-
-
-
-
-
-
-    /*
-    FILE * most_gp;
-    most_gp = fopen("melhores_ataques.txt", "w");
-    for (i=0; i<N; i++) {
-        fprintf(most_gp, "\%d\t\%s\t\%d\t\%d\t\%d\t\%d\t\%d\t\%d\t\%d\t\%d\n", BR[i].classificacao, BR[i].nome, BR[i].pontos, BR[i].jogos, BR[i].v, BR[i].e, BR[i].d, BR[i].gp, BR[i].gc, BR[i].sg);
-    }
-    */
 
     return 0;
 }
