@@ -126,5 +126,10 @@ int main()
         fprintf(less_gc, "\%d\t\%s\t\%d\n", BR[i].classificacao, BR[i].nome, BR[i].gc);
     }
 
+    int fclose(FILE * teams);
+    int fclose(FILE * n_pos);
+    int fclose(FILE * less_gp);
+    int fclose(FILE * less_gc);
+	
     return 0;
 }
